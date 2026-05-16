@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Journal | Bougainvillea</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&amp;family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;display=swap" rel="stylesheet"/>
+    <style type="text/tailwindcss">
+        @theme {
+            --color-on-background: #1b1c1a;
+            --color-secondary-fixed: #eee0cf;
+            --color-error: #ba1a1a;
+            --color-on-primary-fixed: #161b28;
+            --color-on-primary-fixed-variant: #424655;
+            --color-on-surface-variant: #45464c;
+            --color-surface-container: #efeeea;
+            --color-on-primary: #ffffff;
+            --color-tertiary-fixed-dim: #a9d0ae;
+            --color-secondary-fixed-dim: #d2c5b4;
+            --color-inverse-primary: #c2c6d8;
+            --color-background: #faf9f5;
+            --color-error-container: #ffdad6;
+            --color-surface-container-low: #f4f4f0;
+            --color-on-primary-container: #828697;
+            --color-primary-fixed-dim: #c2c6d8;
+            --color-on-secondary-fixed-variant: #4e4639;
+            --color-surface-bright: #faf9f5;
+            --color-on-error-container: #93000a;
+            --color-secondary: #675d4f;
+            --color-surface-container-highest: #e3e2df;
+            --color-primary: #030612;
+            --color-on-tertiary-fixed-variant: #2c4e34;
+            --color-primary-container: #1a1f2c;
+            --color-surface-tint: #595e6d;
+            --color-inverse-surface: #2f312e;
+            --color-outline: #76777c;
+            --color-tertiary: #000902;
+            --color-surface: #faf9f5;
+            --color-on-secondary: #ffffff;
+            --color-on-surface: #1b1c1a;
+            --color-surface-dim: #dbdad6;
+            --color-surface-container-lowest: #ffffff;
+            --color-primary-fixed: #dee2f4;
+            --color-outline-variant: #c6c6cc;
+            --color-on-tertiary-fixed: #00210c;
+            --color-tertiary-fixed: #c5ecc9;
+            --color-secondary-container: #ebdecc;
+            --color-on-error: #ffffff;
+            --color-on-secondary-fixed: #211b10;
+            --color-surface-container-high: #e9e8e4;
+            --color-inverse-on-surface: #f2f1ed;
+            --color-tertiary-container: #02250f;
+            --on-tertiary: #ffffff;
+            --color-on-tertiary-container: #6b8f71;
+            --color-surface-variant: #e3e2df;
+            --color-on-secondary-container: #6b6153;
+
+            --radius-default: 0.125rem;
+            --radius-lg: 0.25rem;
+            --radius-xl: 0.5rem;
+            --radius-full: 0.75rem;
+
+            --spacing-margin-desktop: 80px;
+            --spacing-section-gap: 120px;
+            --spacing-unit: 8px;
+            --spacing-margin-mobile: 24px;
+            --spacing-gutter: 24px;
+
+            --font-title-lg: "DM Sans";
+            --font-display: "Playfair Display";
+            --font-headline-lg: "Playfair Display";
+            --font-label-md: "DM Sans";
+            --font-body-md: "DM Sans";
+            --font-headline-md: "Playfair Display";
+            --font-headline-lg-mobile: "Playfair Display";
+            --font-body-lg: "DM Sans";
+
+            --text-title-lg: 20px;
+            --text-title-lg--line-height: 1.5;
+            --text-title-lg--letter-spacing: 0.02em;
+            --text-title-lg--font-weight: 500;
+
+            --text-display: 64px;
+            --text-display--line-height: 1.1;
+            --text-display--letter-spacing: -0.02em;
+            --text-display--font-weight: 600;
+
+            --text-headline-lg: 48px;
+            --text-headline-lg--line-height: 1.2;
+            --text-headline-lg--font-weight: 500;
+
+            --text-label-md: 14px;
+            --text-label-md--line-height: 1.2;
+            --text-label-md--letter-spacing: 0.08em;
+            --text-label-md--font-weight: 600;
+
+            --text-body-md: 16px;
+            --text-body-md--line-height: 1.6;
+            --text-body-md--font-weight: 400;
+
+            --text-headline-md: 32px;
+            --text-headline-md--line-height: 1.3;
+            --text-headline-md--font-weight: 500;
+
+            --text-headline-lg-mobile: 32px;
+            --text-headline-lg-mobile--line-height: 1.2;
+            --text-headline-lg-mobile--font-weight: 500;
+
+            --text-body-lg: 18px;
+            --text-body-lg--line-height: 1.6;
+            --text-body-lg--font-weight: 400;
+        }
+    </style>
+    <style>
+        .bg-forest-green { background-color: #2c4e34; }
+        .text-midnight-indigo { color: #030612; }
+        .border-sandstone { border-color: #d2c5b4; }
+        .text-ivory { color: #faf9f5; }
+    </style>
+</head>
+<body class="antialiased selection:bg-tertiary-fixed selection:text-on-tertiary-fixed bg-surface dark:bg-primary text-on-surface dark:text-primary-fixed">
+
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-primary/80 backdrop-blur-md border-b border-outline-variant/30 transition-all duration-500 ease-in-out">
+    <div class="flex justify-between items-center h-20 px-margin-mobile md:px-margin-desktop max-w-[1440px] mx-auto">
+        <a class="font-display-lg text-headline-md tracking-tighter text-primary dark:text-primary-fixed" href="index.html">Bougainvillea</a>
+<nav class="hidden md:flex space-x-8">
+    <a class="font-button text-button uppercase tracking-widest text-on-surface-variant dark:text-on-primary-fixed-variant hover:text-primary dark:hover:text-primary-fixed transition-colors hover:opacity-70 duration-300" href="collections.html">Collections</a>
+    <a class="font-button text-button uppercase tracking-widest text-on-surface-variant dark:text-on-primary-fixed-variant hover:text-primary dark:hover:text-primary-fixed transition-colors hover:opacity-70 duration-300" href="about.html">Our Story</a>
+    <a class="font-button text-button uppercase tracking-widest text-on-surface-variant dark:text-on-primary-fixed-variant hover:text-primary dark:hover:text-primary-fixed transition-colors hover:opacity-70 duration-300" href="shop.html">Boutique</a>
+    <a class="font-button text-button uppercase tracking-widest text-primary dark:text-primary-fixed border-b border-primary dark:border-primary-fixed" href="journal.html">Journal</a>
+</nav>
+<div class="hidden md:flex items-center space-x-6">
+    <button class="text-primary dark:text-primary-fixed hover:opacity-70 transition-opacity duration-300">
+        <span class="material-symbols-outlined">search</span>
+    </button>
+    <button class="text-primary dark:text-primary-fixed hover:opacity-70 transition-opacity duration-300">
+        <span class="material-symbols-outlined">shopping_bag</span>
+    </button>
+    <a href="shop.html" class="bg-forest-green text-ivory px-6 py-3 font-label-md text-label-md uppercase tracking-[0.08em] hover:bg-opacity-90 transition-all duration-200">
+        Shop Now
+    </a>
+</div>
+<button class="md:hidden text-primary dark:text-primary-fixed">
+    <span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</header>
+
+<main class="pt-20">
+    <!-- Journal Header -->
+    <section class="py-20 px-margin-mobile md:px-margin-desktop max-w-[1440px] mx-auto text-center">
+        <span class="font-label-md text-xs uppercase tracking-[0.2em] text-on-surface-variant mb-4 block">Editorial Stories</span>
+        <h1 class="font-display text-headline-lg-mobile md:text-display text-midnight-indigo dark:text-primary-fixed mb-8">Journal</h1>
+        <div class="flex justify-center gap-8 border-b border-outline-variant pb-8 overflow-x-auto whitespace-nowrap">
+            <a href="#" class="font-label-md text-xs uppercase tracking-widest text-primary dark:text-primary-fixed border-b border-primary dark:border-primary-fixed pb-2">All Stories</a>
+            <a href="#" class="font-label-md text-xs uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors">Style</a>
+            <a href="#" class="font-label-md text-xs uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors">Craft</a>
+            <a href="#" class="font-label-md text-xs uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors">Travel</a>
+        </div>
+    </section>
+
+    <!-- Featured Post -->
+    <section class="pb-section-gap px-margin-mobile md:px-margin-desktop max-w-[1440px] mx-auto">
+        <div class="group relative overflow-hidden aspect-[16/9] border border-sandstone mb-12">
+            <img alt="The Art of Linen" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-[1.02]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIOcN9Mo0tl5_vTJQjgZcm5767DfvFO24uk14UPrQBrJ6aReEg1CLUexT1_HsbTWKoX88uHc1PLjYXwV8ZS4-lN-B87ujtDtyN1o3rwJ83s0-4-qcIQbqg7EFst2Qe2rYUeIsvJRp8niQL0xItN_fN8lmcfsLWqg9px9t2CdBJtFhqHC7nO1IlgmTYUIZS4_FD-9qJE8wAqOArPDB2TAo2SfUzar3afX1ZWbACj7tCwhmz06yHC4ETOo604ckL3OCdyizRSDGGhDI"/>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+            <div class="absolute bottom-0 left-0 p-8 md:p-16 max-w-3xl">
+                <span class="font-label-md text-xs uppercase tracking-widest text-white/80 mb-4 block">Craftsmanship</span>
+                <h2 class="font-display text-headline-lg-mobile md:text-headline-lg text-white mb-6">The Art of Linen: From Belgian Fields to Your Sanctuary</h2>
+                <p class="font-body-md text-white/90 mb-8 line-clamp-2">Explore the meticulous process behind our signature fabric, and why Belgian linen remains the gold standard of sustainable luxury.</p>
+                <a href="#" class="bg-white text-midnight-indigo px-8 py-4 font-label-md text-label-md uppercase tracking-widest hover:bg-opacity-90 transition-all">Read Story</a>
+            </div>
+        </div>
+
+        <!-- Grid of Stories -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-gutter gap-y-section-gap">
+            <!-- Article 1 -->
+            <article class="group cursor-pointer">
+                <div class="aspect-[4/5] overflow-hidden border border-sandstone mb-6">
+                    <img alt="Styling Tip" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBLcIztwaFpHFwvSavbm1enzSzpCJ3tjf3BbWoJPBAlqRBbtUOzmq0bjzEri6DQ5JiZjZ2q8aDTNkmX3lQLqzEK6huOGRca5AzTTImbvW4S8ia2Dpq0kAF7gA3aqMVlQQ2ggQzvjF4g5JiWGmuJsiJTKd5Tx2PkXOpQoPG4FfkgbtQEGgPlFQ-IPYKxltRmhb776yXzzd4qd0pfFs8e9h7eDswTNArngWeSvy4nthojGTmSrvan3_XRUd6l-lyVqmYAwtLLUXqBc6g"/>
+                </div>
+                <div class="space-y-4">
+                    <span class="font-label-md text-[10px] uppercase tracking-[0.2em] text-on-surface-variant">Styling</span>
+                    <h3 class="font-display text-headline-md text-primary dark:text-primary-fixed leading-tight group-hover:underline decoration-sandstone underline-offset-8 transition-all">Effortless Elegance: 5 Ways to Style the Oversized Tunic</h3>
+                    <p class="font-body-md text-sm text-on-surface-variant line-clamp-3">The oversized tunic is more than a garment; it's a canvas for personal expression. Discover how to transition this essential from morning serenity to evening soirées.</p>
+                    <div class="flex items-center gap-4 pt-4">
+                        <div class="w-8 h-[1px] bg-sandstone"></div>
+                        <span class="font-label-md text-[10px] uppercase tracking-widest text-outline">May 12, 2024</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Article 2 -->
+            <article class="group cursor-pointer">
+                <div class="aspect-[4/5] overflow-hidden border border-sandstone mb-6">
+                    <img alt="Sustainable Living" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAR-nYzfaOPBcCngLU8xNMezrTbVG8lKQVZdx9aHMF-bnwN2o83Ry5VXuputnFLAuJxYXOgYYTd2vVE6PmMq7ALJH7jKsb4pBGJPr7GnHufzluD99UqGbyEz0Q2rAueaYmNm8RDbqQa6DDu1__ctfsrfiUnwQHOMdmxmUxUXC4DOqXbsc0WNM9UXMKaEOlme4x9ZZ8CdjGxgL101Xhblu0vguyx_JWUGlreVqTHoFvVX-dsIu1lN8WPJ1z8a70oIMsZ1IAZ2BUPk_w"/>
+                </div>
+                <div class="space-y-4">
+                    <span class="font-label-md text-[10px] uppercase tracking-[0.2em] text-on-surface-variant">Philosophy</span>
+                    <h3 class="font-display text-headline-md text-primary dark:text-primary-fixed leading-tight group-hover:underline decoration-sandstone underline-offset-8 transition-all">Minimalism as a Path to Abundance</h3>
+                    <p class="font-body-md text-sm text-on-surface-variant line-clamp-3">In a world of constant noise, choosing less is an act of rebellion. We explore the profound impact of intentional living on our creativity and well-being.</p>
+                    <div class="flex items-center gap-4 pt-4">
+                        <div class="w-8 h-[1px] bg-sandstone"></div>
+                        <span class="font-label-md text-[10px] uppercase tracking-widest text-outline">May 08, 2024</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Article 3 -->
+            <article class="group cursor-pointer">
+                <div class="aspect-[4/5] overflow-hidden border border-sandstone mb-6">
+                    <img alt="Behind the Scenes" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIOcN9Mo0tl5_vTJQjgZcm5767DfvFO24uk14UPrQBrJ6aReEg1CLUexT1_HsbTWKoX88uHc1PLjYXwV8ZS4-lN-B87ujtDtyN1o3rwJ83s0-4-qcIQbqg7EFst2Qe2rYUeIsvJRp8niQL0xItN_fN8lmcfsLWqg9px9t2CdBJtFhqHC7nO1IlgmTYUIZS4_FD-9qJE8wAqOArPDB2TAo2SfUzar3afX1ZWbACj7tCwhmz06yHC4ETOo604ckL3OCdyizRSDGGhDI"/>
+                </div>
+                <div class="space-y-4">
+                    <span class="font-label-md text-[10px] uppercase tracking-[0.2em] text-on-surface-variant">Travel</span>
+                    <h3 class="font-display text-headline-md text-primary dark:text-primary-fixed leading-tight group-hover:underline decoration-sandstone underline-offset-8 transition-all">A Weekend in Kyoto: Finding Zen in the Details</h3>
+                    <p class="font-body-md text-sm text-on-surface-variant line-clamp-3">Our creative director shares her personal guide to the hidden gardens and quiet tea houses that inspired our latest collection.</p>
+                    <div class="flex items-center gap-4 pt-4">
+                        <div class="w-8 h-[1px] bg-sandstone"></div>
+                        <span class="font-label-md text-[10px] uppercase tracking-widest text-outline">April 28, 2024</span>
+                    </div>
+                </div>
+            </article>
+        </div>
+
+        <!-- Load More -->
+        <div class="mt-20 text-center">
+            <button class="border border-outline text-primary dark:text-primary-fixed px-12 py-4 font-label-md text-xs uppercase tracking-[0.2em] hover:bg-primary hover:text-white dark:hover:bg-primary-fixed dark:hover:text-primary transition-all duration-300">Load More Stories</button>
+        </div>
+    </section>
+</main>
+
+<!-- Footer -->
+<footer class="bg-surface-container dark:bg-primary-container w-full py-section-gap border-t border-outline-variant dark:border-outline-variant">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-mobile md:px-margin-desktop max-w-[1440px] mx-auto">
+        <div class="col-span-1 md:col-span-1 mb-8 md:mb-0">
+            <a class="flex items-center mb-4 block" href="index.html">
+                <img src="img/bougainvile-logo.png" alt="Bougainvillea Logo" class="h-10 w-auto object-contain dark:invert">
+            </a>
+            <p class="font-body-md text-body-md text-on-surface-variant">A sanctuary of quiet luxury, where nature and refined design converge to offer unparalleled serenity.</p>
+        </div>
+        <div class="col-span-1 md:col-span-2 grid grid-cols-2 gap-8">
+            <div>
+                <h4 class="font-label-md text-label-md uppercase tracking-widest text-primary dark:text-primary-fixed mb-6">Explore</h4>
+                <ul class="space-y-4">
+                    <li><a class="font-body-md text-body-md text-on-secondary-container dark:text-on-primary-fixed-variant hover:text-primary dark:hover:text-primary-fixed transition-colors" href="collections.html">Collections</a></li>
+                    <li><a class="font-body-md text-body-md text-on-secondary-container dark:text-on-primary-fixed-variant hover:text-primary dark:hover:text-primary-fixed transition-colors" href="about.html">Our Story</a></li>
+                    <li><a class="font-body-md text-body-md text-on-secondary-container dark:text-on-primary-fixed-variant hover:text-primary dark:hover:text-primary-fixed transition-colors" href="shop.html">Boutique</a></li>
+                    <li><a class="font-body-md text-body-md text-on-secondary-container dark:text-on-primary-fixed-variant hover:text-primary dark:hover:text-primary-fixed transition-colors" href="journal.html">Journal</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-label-md text-label-md uppercase tracking-widest text-primary dark:text-primary-fixed mb-6">Support</h4>
+                <ul class="space-y-4">
+                    <li><a class="font-label-md text-label-md uppercase tracking-widest text-on-secondary-container dark:text-on-primary-fixed-variant hover:text-primary dark:hover:text-primary-fixed transition-colors" href="contact.html">Contact Us</a></li>
+                    <li><a class="font-label-md text-label-md uppercase tracking-widest text-on-secondary-container dark:text-on-primary-fixed-variant hover:text-primary dark:hover:text-primary-fixed transition-colors" href="#">Shipping & Returns</a></li>
+                    <li><a class="font-label-md text-label-md uppercase tracking-widest text-on-secondary-container dark:text-on-primary-fixed-variant hover:text-primary dark:hover:text-primary-fixed transition-colors" href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-span-1 md:col-span-1 flex flex-col justify-between mt-8 md:mt-0 border-t border-outline-variant dark:border-outline-variant pt-8 md:border-t-0 md:pt-0">
+            <div class="flex space-x-4 mb-8">
+                <a class="w-10 h-10 border border-sandstone flex items-center justify-center text-primary dark:text-primary-fixed hover:bg-primary dark:hover:bg-primary-fixed hover:text-white dark:hover:text-primary transition-colors" href="#">
+                    <span class="sr-only">Instagram</span>
+                    In
+                </a>
+                <a class="w-10 h-10 border border-sandstone flex items-center justify-center text-primary dark:text-primary-fixed hover:bg-primary dark:hover:bg-primary-fixed hover:text-white dark:hover:text-primary transition-colors" href="#">
+                    <span class="sr-only">Facebook</span>
+                    Fb
+                </a>
+            </div>
+            <p class="font-body-md text-body-md text-on-surface-variant">© 2024 Bougainvillea. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<!-- Mobile Menu Drawer -->
+<div id="mobile-menu" class="fixed inset-0 z-[100] bg-surface dark:bg-primary translate-x-full transition-transform duration-500 ease-in-out md:hidden">
+    <div class="flex justify-between items-center h-20 px-margin-mobile border-b border-outline-variant/30">
+        <a class="font-display-lg text-headline-md tracking-tighter text-primary dark:text-primary-fixed" href="index.html">Bougainvillea</a>
+        <button id="close-menu" class="text-primary dark:text-primary-fixed">
+            <span class="material-symbols-outlined">close</span>
+        </button>
+    </div>
+    <nav class="flex flex-col p-margin-mobile space-y-8 mt-12">
+        <a class="font-display text-headline-md text-primary dark:text-primary-fixed" href="collections.html">Collections</a>
+        <a class="font-display text-headline-md text-primary dark:text-primary-fixed" href="about.html">Our Story</a>
+        <a class="font-display text-headline-md text-primary dark:text-primary-fixed" href="shop.html">Boutique</a>
+        <a class="font-display text-headline-md text-primary dark:text-primary-fixed" href="journal.html">Journal</a>
+        <a class="font-display text-headline-md text-primary dark:text-primary-fixed border-t border-outline-variant pt-8" href="contact.html">Contact</a>
+    </nav>
+</div>
+
+<script>
+    const menuBtn = document.querySelector('button.md\\:hidden');
+    const closeBtn = document.getElementById('close-menu');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuBtn.addEventListener('click', () => {
+        mobileMenu.classList.remove('translate-x-full');
+    });
+
+    closeBtn.addEventListener('click', () => {
+        mobileMenu.classList.add('translate-x-full');
+    });
+</script>
+</body>
+</html>
+</html>
